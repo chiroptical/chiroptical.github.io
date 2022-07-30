@@ -1,4 +1,7 @@
 serve:
 	bundle exec jekyll serve --livereload
 
-.PHONY: serve
+update:
+	bundle update
+
+.PHONY: serve update
