@@ -28,7 +28,7 @@ twitter_username: chiroptical
 github_username:  chiroptical
 
 # Build settings
-theme: jekyll-theme-cayman
+theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
 
