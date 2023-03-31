@@ -1,3 +1,10 @@
+Installation
+---
+
+- `ruby` (brings `bundle`) and `jekyll` are available in nixpkgs
+- `bundle install` will install the dependencies from `Gemfile`
+- `make` will serve the application
+
 TODO
 ---
 
