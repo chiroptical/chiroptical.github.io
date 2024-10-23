@@ -19,6 +19,7 @@ You at least have some familiarity with GitHub Actions and Erlang.
 This is actually very easy thanks to the Erlang Foundation's [setup-beam][setup-beam] action.
 Here is the top of my `ci.yaml` file,
 
+{% raw %}
 ```yaml
 on: push
 
@@ -34,9 +35,10 @@ jobs:
       - uses: actions/checkout@v4
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: $\{\{matrix.otp\}\}
-          rebar3-version: $\{\{matrix.rebar3\}\}
+          otp-version: ${{matrix.otp}}
+          rebar3-version: ${{matrix.rebar3}}
 ```
+{% endraw %}
 
 I am building and testing an application here, so having an intensive matrix isn't particularly helpful.
 Next, the actual checks and tests I want to run,
@@ -152,15 +154,17 @@ copy of my migrated database. This is because, locally, `my_app` is used to test
 and I don't want to copy any data from it every time I create a temporary database.
 Migrating the template database is also easy,
 
+{% raw %}
 ```yaml
       - uses: cachix/install-nix-action@v27
         with:
           nix_path: nixpkgs=channel:nixos-unstable
-          github_access_token: $\{\{ secrets.GITHUB_TOKEN \}\}
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
       - run: nix-shell -p dbmate --run "unset PGSERVICEFILE && dbmate up"
         env:
-          DATABASE_URL: $\{\{ steps.postgres.outputs.connection-uri \}\}?sslmode=disable
+          DATABASE_URL: ${{ steps.postgres.outputs.connection-uri }}?sslmode=disable
 ```
+{% endraw %}
 
 Here, I use [nix][nix] to get [dbmate][dbmate].
 Both of these tools are nice to use.
