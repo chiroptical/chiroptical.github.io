@@ -34,8 +34,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: ${{matrix.otp}}
-          rebar3-version: ${{matrix.rebar3}}
+          otp-version: $\{\{matrix.otp\}\}
+          rebar3-version: $\{\{matrix.rebar3\}\}
 ```
 
 I am building and testing an application here, so having an intensive matrix isn't particularly helpful.
@@ -156,10 +156,10 @@ Migrating the template database is also easy,
       - uses: cachix/install-nix-action@v27
         with:
           nix_path: nixpkgs=channel:nixos-unstable
-          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+          github_access_token: $\{\{ secrets.GITHUB_TOKEN \}\}
       - run: nix-shell -p dbmate --run "unset PGSERVICEFILE && dbmate up"
         env:
-          DATABASE_URL: ${{ steps.postgres.outputs.connection-uri }}?sslmode=disable
+          DATABASE_URL: $\{\{ steps.postgres.outputs.connection-uri \}\}?sslmode=disable
 ```
 
 Here, I use [nix][nix] to get [dbmate][dbmate].
