@@ -152,6 +152,14 @@ for reference,
 - [parser][day3-parser]
 - [solution][day3-solution]
 
+Conclusion
+---
+
+I hope leex and yecc are already getting easier to use. More examples coming.
+If you have any suggestions, questions, or corrections hit me up on [bluesky]
+[bluesky].
+
+[bluesky]: https://bsky.app/profile/chiroptical.dev
 [from-list]: https://www.erlang.org/doc/apps/stdlib/maps.html#from_list/1
 [day4]: https://adventofcode.com/2024/day/4
 [day3-lexer]: https://github.com/chiroptical/advent_of_code_2024/blob/main/src/lexer_day_3_2024.xrl
