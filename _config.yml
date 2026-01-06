@@ -24,8 +24,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   A random blog about random stuff
 url: https://chiroptical.github.io
 domain: chiroptical.github.io
-twitter_username: chiroptical
-github_username:  chiroptical
+github_username: chiroptical
+youtube_username: chiroptical
 
 # Build settings
 theme: minima

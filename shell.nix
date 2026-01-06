@@ -5,7 +5,7 @@ pkgs.mkShell {
     alejandra
 
     # ruby stuff
-    ruby_3_2
-    rubyPackages_3_2.jekyll
+    ruby_3_4
+    rubyPackages_3_4.jekyll
   ];
 }
