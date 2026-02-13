@@ -117,4 +117,4 @@ I also wrote two other functions for links:
 
 I did try a two column `#grid` but the alignment was a bit wonky. I would like
 to spend a bit more time handling columnar layouts before attempting to show
-some code. Let me know what you think on [Twitter](https://twitter.com/chiroptical)
+some code. Let me know what you think on [BlueSky](https://bsky.app/profile/chiroptical.dev)

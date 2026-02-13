@@ -132,7 +132,7 @@ interesting, and will hopefully make me think more carefully about context. I
 hope you enjoyed it as much as I did.
 
 Find typos or have suggestions? My DMs are always open
-[@chiroptical](https://twitter.com/chiroptical).
+[@chiroptical.dev](https://bsky.app/profile/chiroptical.dev).
 
 Like the content? Follow me on [Twitch](https://twitch.tv/chiroptical) and
 subscribe on [Youtube](https://youtube.com/chiroptical)

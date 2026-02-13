@@ -12,7 +12,7 @@ See [the first post in this
 series](/blog/path-to-beginnery-in-functional-programming-with-haskell) for an
 introduction to this series. Quick recap: I am trying to track my path
 completing Haskell programming projects from books I am reading. Feel free to
-message me on Twitter [@chiroptical](https://twitter.com/chiroptical) with any
+message me on BlueSky [@chiroptical.dev](https://bsky.app/profile/chiroptical.dev) with any
 corrections or suggestions on new topics.
 
 Project 1

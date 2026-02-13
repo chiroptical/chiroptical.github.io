@@ -43,7 +43,7 @@ If you don't have access to install with `sudo`, add `
 --prefix=<somewhere_you_have_access> --disable-suid` to the configure line (via
 [Issue 1258](https://github.com/singularityware/singularity/issues/1258)). I am
 not going to go over the basics of Singularity, check out their documentation
-for that (or hit me up on Twitter and I'll write about it).
+for that (or hit me up on BlueSky and I'll write about it).
 
 Setting Up
 ---
@@ -218,4 +218,4 @@ compiling TF by hand in our HPC environment. To be fair, I also spent a lot of
 time mucking around with building Singularity images on GPUs. However, every
 time a new release of TF comes around I can simply update the container and
 stop compiling it by hand. As usual, if anyone thinks what I am doing is stupid
-and you have a better way. Message me on Twitter.
+and you have a better way. Message me on BlueSky [@chiroptical.dev](https://bsky.app/profile/chiroptical.dev).

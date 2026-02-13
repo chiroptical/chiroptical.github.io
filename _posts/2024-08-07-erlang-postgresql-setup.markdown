@@ -227,7 +227,7 @@ This was a super interesting thing to set up myself. It isn't a ton of work
 and there are GitHub actions to help you out. I am really enjoying my time with
 Erlang but testing even simple database actions is really important. I found
 that almost all of my query code was wrong at first. The project I set this up for is
-currently private but feel free to ask me questions on [Twitter][twitter].
+currently private but feel free to ask me questions on [BlueSky][bluesky].
 
 [setup-beam]: https://github.com/erlef/setup-beam
 [eunit]: https://www.erlang.org/doc/apps/eunit/chapter.html
@@ -235,4 +235,4 @@ currently private but feel free to ask me questions on [Twitter][twitter].
 [nix]: https://nixos.org
 [dbmate]: https://github.com/amacneil/dbmate
 [bits-logger]: https://www.youtube.com/watch?v=xMvwYtUkT0A
-[twitter]: https://x.com/chiroptical
+[bluesky]: https://bsky.app/profile/chiroptical.dev

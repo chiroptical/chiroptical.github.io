@@ -297,8 +297,8 @@ The full code is available in a Jupyter Notebook on
 part 0. Next time we'll look into Ray and let it coordinate the
 `Dataset/DataLoader` workflow over multiple nodes!
 
-If you have any suggestions or improvements please message me on Twitter
-[@chiroptical](https://twitter.com/chiroptical) or submit an issue on
+If you have any suggestions or improvements please message me on BlueSky
+[@chiroptical.dev](https://bsky.app/profile/chiroptical.dev) or submit an issue on
 [Github](https://github.com/chiroptical/pytorch-ray-workflow).
 
 ##### Edits

@@ -159,5 +159,5 @@ fit in `int64_t`.
 
 This code was an academic exercise, but I think it is neat. This is my first
 experience with TMP and I am very interested to learn more. Feel free to
-message me, or follow me, on Twitter with constructive criticism or for future
+message me, or follow me, on [BlueSky](https://bsky.app/profile/chiroptical.dev) with constructive criticism or for future
 blog posts.

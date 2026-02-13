@@ -24,7 +24,7 @@ In this blog series, I want to document __my__ path to "Beginnery" in Haskell. I
 have no formal training with Computer Science and I wouldn't call this series
 educational. If it helps anyone that would be a great bonus. I just want to be
 able to look back and track my own progress. I don't really want to accept
-comments on this website, please direct message me on Twitter [@chiroptical](https://twitter.com/chiroptical).
+comments on this website, please direct message me on BlueSky [@chiroptical.dev](https://bsky.app/profile/chiroptical.dev).
 and I will try to fix any mistakes, accept feedback for my crappy code, or
 potentially accept new problems.
 
@@ -319,5 +319,5 @@ gist](https://gist.github.com/barrymoo/b6638759560e61d419314c67a128ab36). I
 can't stop you from making comments, but understand I am a novice. I will learn
 better techniques as I continue.
 
-Hope you enjoyed this post, let me know what you think on Twitter
-[@chiroptical](https://twitter.com/chiroptical)
+Hope you enjoyed this post, let me know what you think on BlueSky
+[@chiroptical.dev](https://bsky.app/profile/chiroptical.dev)
