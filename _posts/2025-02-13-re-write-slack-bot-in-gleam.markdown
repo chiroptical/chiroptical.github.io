@@ -44,9 +44,9 @@ Id = SlackChannel#slack_channel.id,
 
 I don't think this pattern is great _across_ modules. You can give the fields
 types and they can be checked with dialyzer/eqwalizer. That just doesn't provide
-**me** enough, I'm not a smart man. A compiler with expressive types, that are
-checked by a compiler, and easily shareable across modules saves me a lot of
-stress and brainpower.
+**me** enough, I'm not a smart man. A compiler with expressive types, that
+are checked, and easily shareable across modules saves me a lot of stress and
+brainpower.
 
 In Gleam, this record is defined,
 
@@ -209,7 +209,9 @@ I couldn't write,
 
 the compiler will **tell me** I goofed up. I like that. Additionally, if I want
 to use some other error type the compiler will help me refactor e.g. if I wanted
-to use a validation monad (I had to sneak the 'm' word in here).
+to use a validation monad (I had to sneak the 'm' word in here). Additionally,
+if the shape is updated I'll get a compiler error. Note: be careful using blanket
+pattern matches, e.g. `_, _, _ ->` above, because you could miss API updates!
 
 Adding a Front-end
 ---
@@ -254,7 +256,7 @@ Gleam gave me all the tools I needed to be successful. The language is simple
 and can be picked up quickly. The community is stellar and super helpful. You
 can build full-stack applications with one language. If you are looking for
 a strong statically typed language, check out Gleam. You'll also, eventually,
-learn about Erlang/OTP which has really nice patterns for building robust
+learn about Erlang/OTP which has really nice patterns to help build robust
 software.
 
 Feel free to send me a direct message on [BlueSky][bluesky] if you have any
