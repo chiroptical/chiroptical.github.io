@@ -151,25 +151,6 @@ This is true of internal blocks of code as well. In Erlang, when I pull out a
 chunk of code, I have to figure out what the spec is supposed to be. In Gleam,
 it was known before and it is known now. There is even a code action to do it.
 
-Adding a Front-end
----
-
-There is only a small footprint of front-end code for Music Monday today.
-Essentially an install button, some frequently asked questions, and a page to
-describe how to use the bot after it is installed. However, if I want to do
-something more interesting there aren't many friendly and maintained Erlang
-frameworks to build with. I think [Nova][nova] looks interesting, but I'm really
-looking for something like [Elm][elm].
-
-Enter [Lustre][lustre].
-
-It was very easy for me to get a server-side rendered application
-together. The types were easy to figure out and there are examples
-and a good amount of documentation. I also already had a Tailwind
-Plus subscription so it was easy to drop the HTML into [this
-converter](https://lpil.github.io/html-lustre-converter/) (thanks Louis!) and
-get the Lustre representation.
-
 Programming the Happy Path
 ---
 
@@ -189,14 +170,16 @@ Let's start with an example using `maybe` from Erlang,
 Here, I'm trying to lookup some keys in a "proplist" (a list of key-value
 tuples). They all need to be present to succeed. If `proplists:lookup`
 succeeds it returns `{Key, Value}` if it fails it returns `none`. This
-API is actually quite friendly for `maybe` expressions, some aren't. The
-`?=` syntax is saying, if the left side of the expression is a successful
-pattern match continue otherwise go to the `else` block and start pattern
-matching. If `proplists:lookup` returned `error` instead of `none` (and I
-forgot), this block of code would be fail to pattern match. As far as I know,
-dialyzer won't catch this. I believe other projects are working on that e.g.
-https://github.com/etylizer/etylizer. However, I don't think that is ready for
-consumption at the time of writing (I could be wrong).
+API is actually quite friendly for `maybe` expressions, others aren't.
+
+First, the `?=` syntax is saying, if the left side of the expression is
+a successful pattern match continue otherwise go to the `else` block and
+start pattern matching. Let's imagine that an update to the proplists API
+caused `proplists:lookup` to `error` instead of `none` **or** `{error,
+not_a_proplist}` if you don't provide a proplist. In either of those update
+scenarios, my pattern match would fail. Tools like dialyzer won't catch this,
+but I believe other projects are working on full compilers for Erlang, e.g.
+https://github.com/etylizer/etylizer.
 
 In Gleam, I just don't have this problem because I am using a compiler with
 exhaustiveness checking. I have a few options for coding this in Gleam, e.g.
@@ -228,16 +211,41 @@ the compiler will **tell me** I goofed up. I like that. Additionally, if I want
 to use some other error type the compiler will help me refactor e.g. if I wanted
 to use a validation monad (I had to sneak the 'm' word in here).
 
+Adding a Front-end
+---
+
+There is only a small footprint of front-end code for Music Monday today.
+Essentially an install button, some frequently asked questions, and a page to
+describe how to use the bot after it is installed. However, if I want to do
+something more interesting there aren't many friendly and maintained Erlang
+frameworks to build with. I think [Nova][nova] looks interesting though.
+
+The only times I have ever really enjoyed writing front-end are with Elm.
+Typescript is a tedious language and doesn't _really_ have a language server
+outside of VSCode. Editing in Helix with the LSP is basically useless. React's
+hooks are getting easier for me, but the number of times I've had to think
+incredibly deeply about the runtime is brutal. I want a simpler language with a
+better editor experience. Enter [Lustre][lustre].
+
+It was very easy for me to get a server-side rendered application
+together. The types were easy to figure out, examples exist, and a
+decent amount of documentation is available. I can use the editor
+I prefer with actually useful LSP functionality. I already have a
+Tailwind Plus subscription so it was easy to drop the HTML into [this
+converter](https://lpil.github.io/html-lustre-converter/) (thanks Louis!) and
+get the Lustre representation.
+
+
 Erlang/OTP
 ---
 
 I'm not going to be able to convince you that Erlang/OTP rocks. There
 are better posts that cover that in **way** more detail. You are just
 going to have to believe me for now. With a combination of [factory
-supervisors](https://hexdocs.pm/gleam_otp) (in Erlang simple-one-for-one
+supervisors](https://hexdocs.pm/gleam_otp) (in Erlang, simple-one-for-one
 supervisors) and [crew](https://hexdocs.pm/crew/index.html) I was able to
 introduce services and back-pressure into my system with little effort. Slack
-has team based API limits for reference.
+has team based API limits and I'd like to be able to build with this in mind.
 
 Conclusion
 ---
@@ -246,8 +254,12 @@ Gleam gave me all the tools I needed to be successful. The language is simple
 and can be picked up quickly. The community is stellar and super helpful. You
 can build full-stack applications with one language. If you are looking for
 a strong statically typed language, check out Gleam. You'll also, eventually,
-learn about Erlang/OTP and it is insanely helpful to build backends that are
-robust to failure.
+learn about Erlang/OTP which has really nice patterns for building robust
+software.
+
+Feel free to send me a direct message on [BlueSky][bluesky] if you have any
+questions, corrections, or want to tell me I'm wrong. I'm always happy to learn
+new things.
 
 [bluesky]: https://bsky.app/profile/chiroptical.dev
 [musicmonday]: https://musicmonday.app
